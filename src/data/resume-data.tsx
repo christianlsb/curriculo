@@ -72,5 +72,23 @@ export const RESUME_DATA = {
         href: "https://todolistlsb.netlify.app/",
       },
     },
+    {
+      title: "Matrículas GUI",
+      techStack: ["Java", "JavaSwing"],
+      description: "Um sistema de matrículas para uma escola.",
+      link: {
+        label: "matriculas-gui",
+        href: "https://github.com/christianlsb/Matriculas-GUI",
+      },
+    },
+    {
+      title: "ElementOOps",
+      techStack: ["Java"],
+      description: "Um jogo de plataforma terminal.",
+      link: {
+        label: "elementoops",
+        href: "https://github.com/christianlsb/ElementOOPs",
+      },
+    },
   ],
 } as const;
