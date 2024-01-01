@@ -62,23 +62,15 @@ export const RESUME_DATA = {
     "PostgreSQL",
     "Prisma",
   ],
-  /*  projects: [
+  projects: [
     {
-      title: "Consultly",
-      techStack: [
-        "Side Project",
-        "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
-      ],
-      description: "A platform to build and grow your online business",
-      logo: ConsultlyLogo,
+      title: "TodoList App",
+      techStack: ["React", "JavaScript", "Styled Components"],
+      description: "Um simples gerenciador de tarefas.",
       link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
+        label: "todolistlsb",
+        href: "https://todolistlsb.netlify.app/",
       },
     },
-  ], */
+  ],
 } as const;
