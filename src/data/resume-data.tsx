@@ -1,5 +1,6 @@
 import { GitHubIcon } from "../components/icons/GitHubIcon";
 import { LinkedInIcon } from "../components/icons/LinkedInIcon";
+
 export const RESUME_DATA = {
   name: "Christian Lisboa",
   initials: "CL",
@@ -46,10 +47,21 @@ export const RESUME_DATA = {
       title: "Estágio Desenvolvedor Frontend",
       start: "2023",
       end: "No momento",
-      description:
-        "Na Tiki, sou responsável por realizar manutenções e implementações de projetos na área de Front-End. Minhas principais responsabilidades incluem trabalhar com tecnologias como Next.js, React, React Native e WordPress.",
+      description: [
+        "• Desenvolvo novas funcionalidades para vários sistemas em que a Tiki lidera.",
+        <br key={1} />,
+        "• Iniciei a implementação de testes no frontend utilizando Cypress.",
+        <br key={2} />,
+        "• Assumo demandas de diversos níveis de complexidade para desafiar minhas habilidades.",
+        <br key={3} />,
+        "• Compartilho ativamente ideias e soluções para resolver problemas dentro da equipe. ",
+        <br key={4} />,
+        "• Valorizo feedbacks sobre meu trabalho e estou sempre em busca de melhorias com base neles.",
+        <br key={5} />,
+      ],
     },
   ],
+
   skills: [
     "JavaScript",
     "TypeScript",
