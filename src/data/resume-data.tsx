@@ -90,14 +90,14 @@ export const RESUME_DATA = {
         href: "https://github.com/christianlsb/ElementOOPs",
       },
     },
-    {
-      title:"FSW-STORE",
-      techStack: ["Next", "Prisma", "Tailwind", "Shadcn"],
-      description: "E-Commerce.",
-      link: {
-        label: "fsw-store",
-        href: "https://fsw-store-lsb.vercel.app/",
-      },
-    }
+    // {
+    //   title:"FSW-STORE",
+    //   techStack: ["Next", "Prisma", "Tailwind", "Shadcn"],
+    //   description: "E-Commerce.",
+    //   link: {
+    //     label: "fsw-store",
+    //     href: "https://fsw-store-lsb.vercel.app/",
+    //   },
+    // }
   ],
 } as const;
