@@ -90,15 +90,15 @@ export const RESUME_DATA = {
     "Prisma",
   ],
   projects: [
-    {
-      title: "TodoList App",
-      techStack: ["React", "JavaScript", "Styled Components"],
-      description: "Um simples gerenciador de tarefas.",
-      link: {
-        label: "todolistlsb",
-        href: "https://todolistlsb.netlify.app/",
-      },
-    },
+    // {
+    //   title: "TodoList App",
+    //   techStack: ["React", "JavaScript", "Styled Components"],
+    //   description: "Um simples gerenciador de tarefas.",
+    //   link: {
+    //     label: "todolistlsb",
+    //     href: "https://todolistlsb.netlify.app/",
+    //   },
+    // },
     {
       title: "Matrículas GUI",
       techStack: ["Java", "JavaSwing"],
