@@ -59,7 +59,7 @@ export const RESUME_DATA = {
       company: "Tiki",
       link: "https://www.tiki.com.br/",
       badges: ["Remote"],
-      title: "Estágio Desenvolvedor Frontend",
+      title: "Desenvolvedor Web",
       start: "abr de 2024",
       end: "No momento",
       description: [],
