@@ -60,8 +60,17 @@ export const RESUME_DATA = {
       link: "https://www.tiki.com.br/",
       badges: ["Remote"],
       title: "Estágio Desenvolvedor Frontend",
-      start: "2023",
+      start: "abr de 2024",
       end: "No momento",
+      description: [],
+    },
+    {
+      company: "Tiki",
+      link: "https://www.tiki.com.br/",
+      badges: ["Remote"],
+      title: "Estágio Desenvolvedor Web",
+      start: "ago de 2023",
+      end: "mar de 2024",
       description: [
         "• Desenvolvo novas funcionalidades para vários sistemas em que a Tiki lidera.",
         <br key={1} />,
