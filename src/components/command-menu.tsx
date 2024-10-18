@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { Calculator, Calendar, Smile } from "lucide-react";
-
+import { UserLogin } from "./user-login";
+import { NewPost } from "./new-post";
 import {
   CommandDialog,
   CommandEmpty,
@@ -19,12 +19,21 @@ interface Props {
 
 export const CommandMenu = ({ links }: Props) => {
   const [open, setOpen] = React.useState(false);
+  const [showNewPostModal, setShowNewPostModal] = React.useState(false);
+  const [loggedIn, setLoggedIn] = React.useState(false);
+  const [showLoginModal, setShowLoginModal] = React.useState(false);
+
+  const handleLoginSuccess = () => {
+    setLoggedIn(true);
+    setShowLoginModal(false);
+    setShowNewPostModal(true);
+  };
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "j" && (e.ctrlKey || e.metaKey)) {
         e.preventDefault();
-        setOpen((open) => !open);
+        setOpen((prev) => !prev);
       }
     };
 
@@ -46,6 +55,18 @@ export const CommandMenu = ({ links }: Props) => {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Ações">
+            <CommandItem
+              onSelect={() => {
+                setOpen(false);
+                if (loggedIn) {
+                  setShowNewPostModal(true);
+                } else {
+                  setShowLoginModal(true);
+                }
+              }}
+            >
+              <span>Criar post</span>
+            </CommandItem>
             <CommandItem
               onSelect={() => {
                 setOpen(false);
@@ -71,6 +92,26 @@ export const CommandMenu = ({ links }: Props) => {
           <CommandSeparator />
         </CommandList>
       </CommandDialog>
+
+      {showLoginModal && <UserLogin onLoginSuccess={handleLoginSuccess} />}
+
+      {showNewPostModal && (
+        <>
+          <div
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+              zIndex: 999,
+            }}
+            onClick={() => setShowNewPostModal(false)}
+          />
+          <NewPost onClose={() => setShowNewPostModal(false)} />
+        </>
+      )}
     </>
   );
 };
