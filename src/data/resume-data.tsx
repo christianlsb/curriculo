@@ -1,5 +1,8 @@
 import { GitHubIcon } from "../components/icons/GitHubIcon";
 import { LinkedInIcon } from "../components/icons/LinkedInIcon";
+import cloudQuest from "../assets/images/cloud-quest.png";
+import Intro2IoT from "../assets/images/Intro2IoT.png";
+import learnAthon from "../assets/images/learn-a-thon.png";
 
 export const RESUME_DATA = {
   name: "Christian Lisboa",
@@ -135,5 +138,31 @@ export const RESUME_DATA = {
     //     href: "https://fsw-store-lsb.vercel.app/",
     //   },
     // }
+  ],
+  certifications: [
+    {
+      id: 1,
+      title: "AWS Cloud Quest: Cloud Practitioner",
+      issuer: "Amazon Web Services",
+      date: "out - 2024",
+      image: cloudQuest,
+      link: "https://www.credly.com/badges/77191e69-4478-4b53-a74e-0d781d1a4e9d/public_url",
+    },
+    {
+      id: 2,
+      title: "Introduction to IoT",
+      issuer: "Cisco Networking Academy",
+      date: "nov - 2022",
+      image: Intro2IoT,
+      link: "https://www.credly.com/badges/196df81c-2596-4de2-90e2-0c5041bb91cf/public_url",
+    },
+    {
+      id: 3,
+      title: "Networking Academy Learn-A-Thon 2022",
+      issuer: "Cisco Networking Academy",
+      date: "abr - 2021",
+      image: learnAthon,
+      link: "https://www.credly.com/badges/330cc3cb-46fd-47ec-90c7-0ed136d7891f/public_url",
+    },
   ],
 } as const;

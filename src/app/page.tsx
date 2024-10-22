@@ -8,6 +8,8 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { RESUME_DATA } from "../data/resume-data";
 import { ProjectCard } from "../components/project-card";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -140,6 +142,41 @@ export default function Page() {
               </Card>
             );
           })}
+        </Section>
+        <Section>
+          <h2 className="text-xl font-bold">Certificações</h2>
+          <div className="flex flex-wrap justify-between gap-6">
+            {RESUME_DATA.certifications.map((education) => {
+              return (
+                <Card key={education.id} className="relative">
+                  <CardHeader>
+                    <div className="flex flex-col gap-x-2 text-base">
+                      <h3 className="font-semibold leading-none">
+                        {education.title}
+                      </h3>
+                      <CardContent className="mt-2">
+                        {education.issuer}
+                      </CardContent>
+                    </div>
+                    <Image
+                      src={education.image}
+                      width={100}
+                      height={100}
+                      alt={education.title}
+                    />
+                    <div className="text-sm tabular-nums text-gray-500">
+                      {education.date}
+                    </div>
+                  </CardHeader>
+                  <Link
+                    target="_blank"
+                    href={education.link}
+                    className="absolute bottom-0 left-0 mt-2 h-full w-full"
+                  ></Link>
+                </Card>
+              );
+            })}
+          </div>
         </Section>
         <Section className="max-md:pb-[30px]">
           <h2 className="text-xl font-bold">Habilidades</h2>
